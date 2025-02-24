@@ -1,0 +1,181 @@
+.map_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh; 
+}
+
+.slider_container {
+  display: flex;
+  z-index: 2;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  position: absolute;
+  top : 0%;
+  left: 0%;
+  margin-top: 17em;
+  margin-left: 22em;             /* 50% from the left */
+  transform: translate(-50%, -50%);
+}
+
+.custom_slider {
+  position: relative;
+  top: 100px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.legend_buttons {
+  flex: 1;
+  flex-direction: row;
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.footer_buttons {
+  position: absolute;
+  /* top: 90%;
+  left: 50%; */
+  top: 82%;
+  /* transform: translate(-50%, -50%); */
+
+  /* padding: 5px 0;
+  
+  z-index: 1; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_button {
+  all: unset;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 7px;
+  background-color: #498467;
+  color: white;
+  font-weight: medium;
+  font-size: 11px;
+}
+
+.footer_button:focus {
+  outline: 2px solid #3ed489;
+}
+
+.header_buttons{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 5em;   
+  width: 80vw;
+  top: 0%;
+  margin-top: 8em;
+  background-color: transparent;
+}
+
+.header_button {
+  all: unset;
+  background: white;
+  padding: 7px 12px;
+  border-radius: 12px;
+  position: relative;
+  margin: 1em;
+  z-index: 1;
+  font-size: 11px;
+}
+
+.header_secondary_buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  margin-top: 12em;
+  margin-left: 0.5em;   
+  background-color: transparent;
+}
+
+.header_secondary_button{
+  margin-bottom: 0.5em;
+}
+
+.active_button {
+  background-color: #258dfc; 
+  color: white; 
+}
+
+.inactive_button {
+  background-color: #5D6D7E;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.transient_button {
+  background-color: #9B59B6;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.transient_map-button {
+  background-color: #F1C40F;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.plan_dropdown {
+  background: white;
+  color: #592941;
+  border:0px;
+  font-size: 11.5px;
+  width: 10em;
+  border-radius: 10px;
+  padding: 5px;
+  z-index: 1;
+  height: 2.1em;
+}
+
+.info_button {
+  all: unset;
+  background: white;
+  padding: 7px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 7px;
+  position: initial;
+  right: 1px;
+}
+
+.checkbox_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading_backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 1.5rem;
+}

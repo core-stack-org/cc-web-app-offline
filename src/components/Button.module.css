@@ -1,0 +1,107 @@
+.footer_button_class {
+    width: 12em;
+    height: 3em;
+    margin-right: 1em;
+    margin-left: 1em;
+    border-radius: 10px;
+    background-color: #D6D5C9;
+    color: #592941;
+    font-weight: 500;
+    cursor: pointer;
+    border-width: 0;
+    margin-bottom: 1.5em;
+    line-height: 1em;
+}
+
+.footer_button_class:disabled{
+    background-color: dimgrey;
+}
+
+.icon_button_class{
+    width: 2.5em;
+    height: 2.1em;
+    border-radius: 5px;
+    border-width: 0;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.dropdown_button_label_class{
+    color: #592941;
+
+}
+
+.dropdown_button_class{
+    padding: 0.5em 0.7em 0.6em 0.7em;
+    border-radius: 10px;
+    border-width: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: #D6D5C9;
+}
+
+.dropdown_icon_arrow{
+    font-weight: 800;
+}
+
+.header_select_button_class{
+    color: #592941;
+    border-radius: 10px;
+    border-width: 0;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    font-size: 1.2em;
+    padding: 0.8em;
+}
+
+
+.header_select_button_active{
+    color: #592941;
+    border-radius: 10px;
+    border-width: 0;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    background-color: #D6D5C9;
+    font-size: 1.2em;
+    padding: 0.8em;
+}
+
+.next_button_icon{
+    margin-left: 5px;
+}
+
+.arrow_button_label{
+    justify-items: center;
+}
+
+
+.layers_button_toggle{
+    background-color: #D6D5C9;
+    color: #592941;
+    border-radius: 10px;
+    border-width: 0;
+
+    font-size: 1.2em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.layer_button_label{
+    display: flex;
+    align-items: center;
+    color: #592941;
+}   
+
+.layer_icon_style{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.2em;
+}
+
+
+.back_button_icon{
+    margin-right: 5px;
+}
+
+.copy_button{
+    padding-left: 0.5em;
+}

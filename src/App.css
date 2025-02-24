@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+*{
+  font-family: 'Mukta', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+.center {
+  
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+}
+.login-center{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 10px;
+  border-style: groove;
+  height: 350px;
+  width: 16%;
+}
+.Login-div {
+  flex:10%;
+}
+
+.row {
+  display: flex;
+}
+  
+.column {
+  flex: 50%;
+}
+
+.App-header {
+  
+  flex: 50%;   
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #f8f9fd;
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 20px;
+}
+
+tr {
+  text-align: center;
+}
+.center-dev {
+  
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+}
+
+
+:root {
+  --main-color: rgb(104, 117, 217);
+  --main-color-hover: rgb(104, 117, 217, 0.2);
+  --track-color: #ddd;
+  /* Default mark color*/
+  --mark-color: #de1e1e;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+
+.customSlider {
+  /* max width of your slider */
+  max-width: 300px;
+  /* Optional: Only If you want to center your slider in the page */
+  margin: auto;
+  z-index: 1;
+}
+
+.customSlider-track {
+  /* Top value to align your track to the center of your thumb */
+  top: 8px;
+  /* thickness of the track */
+  height: 10px;
+  border-radius: 10px;
+  /* default color of your track */
+  background: var(--track-color);
+}
+
+.customSlider-track.customSlider-track-0 {
+  /* color of the track before the thumb */
+  background: var(--main-color);
+}
+.customSlider-thumb {
+  cursor: pointer;
+  /*color for the thumb */
+  background: var(--main-color);
+  /* shape of the thumb: circle */
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  /* remove default outline when selected */
+  outline: none;
+}
+
+.customSlider-thumb:hover {
+  box-shadow: 0 0 0 8px var(--main-color-hover);
+}
+
+.customSlider-mark {
+  cursor: pointer;
+  top: 6px;
+  width: 1.5px;
+  height: 8px;
+  background-color: var(--mark-color);
+  z-index: 2;
+}
+
+
+.smart-app-banner{
+  z-index: 10001;
+  outline: none;
+  background-color: rgb(207, 27, 27);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  inset: 0;
+  height: 5vh;
+}
+
+.banner-main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-meta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.close{
+  position: fixed;
+  left: 2%;
+  top: 1%;
+  font-size: large;
+  font-weight: 800;
+  background-color: transparent;
+  border: 0;
+}
+
+.banner-name{
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.banner-body{
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.ol-zoom {
+  top: 6.5em !important;
+  left: 1.7em !important;
+}
+
+/* .bottom-bar-banner{
+  z-index: 900;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.336);
+  position: absolute;
+  width: 100vw;
+  height: 3.5vh;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-banner-main{
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  font-size: smaller;
+  margin: auto;
+  font-size: 1em;
+}
+
+.bottom-banner-text{
+  margin-right: 1em;
+}
+
+.bottom-copy-button{
+  border-radius: 0.5em;
+  border:0;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+} */
+
+.bottom-bar-banner {
+  z-index: 0;
+  outline: 1px solid rgb(168, 168, 168);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100vw;
+  height: 3.8vh;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-banner-main {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1em;
+  margin: auto;
+}
+
+.bottom-banner-text {
+  margin-right: 1em;
+}
+
+.bottom-copy-button {
+  background-color: transparent;
+  border: 1px solid rgb(158, 158, 158);
+  color: #ffffff;
+  padding: 0.1em 0.5em;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-copy-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.location-selector-modal{
+  z-index: 1001;
+}

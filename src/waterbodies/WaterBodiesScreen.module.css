@@ -1,0 +1,145 @@
+.map_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh; 
+}
+
+.location_icon {
+  font-size: 24px; 
+  color: #f00; 
+}
+
+.slider_container {
+  display: flex;
+  z-index: 2;
+  justify-content: cen_er; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  position: absolute;
+  top: 17%;
+  left: 50%;               /* 50% from the left */
+  transform: translate(-50%, -50%);
+}
+.footer_buttons {
+  all: unset; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+
+  /* Centering the container in the viewport */
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 5px 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.footer_button {
+  all: unset;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 7px;
+  background-color: #498467;
+  color: white;
+  font-weight: medium;
+  font-size: 11px;
+}
+
+.footer_button:focus {
+  outline: 2px solid #3ed489;
+}
+
+.header_buttons{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 5em;   
+  width: 80vw;
+  top: 0%;
+  margin-top: 7em;
+  background-color: transparent;
+}
+
+.header_secondary_buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  margin-top: 12em;
+  margin-left: 0.5em;   
+  background-color: transparent;
+}
+
+.header_secondary_button{
+  margin-bottom: 1em;
+}
+
+
+.header_button {
+  all: unset;
+  background: white;
+  padding: 7px 12px;
+  border-radius: 12px;
+  position: relative;
+  margin: 1%;
+  z-index: 1;
+  font-size: 11px;
+}
+
+.active_button {
+  background-color: #258dfc; 
+  color: white; 
+}
+
+.inactive_button {
+  background-color: #5D6D7E;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.transient_button {
+  background-color: #9B59B6;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.transient_map_button {
+  background-color: #F1C40F;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.plan_dropdown {
+  background: white;
+  border: 10px;
+  font-size: 11px;
+  width: auto;
+}
+
+
+.info_button {
+  all: unset;
+  background: white;
+  padding: 7px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 7px;
+  position: initial;
+  right: 1px;
+}
+
+.checkbox_column {
+  display: flex;
+  flex-direction: column;
+}

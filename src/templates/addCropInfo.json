@@ -1,0 +1,213 @@
+{
+    "title": "Cropping Pattern Form",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "expression",
+        "name": "note1",
+        "title": "Please provide cropping pattern information for the sample crop grid owned by this settlement\nकृपया इस बस्ती के फसल ग्रिड के लिए फसल नमूना की जानकारी प्रदान करें"
+       },
+       {
+        "type": "text",
+        "name": "crop_Grid_id",
+        "title": "Crop Grid ID/ फसल ग्रिड आईडी"
+       },
+       {
+        "type": "text",
+        "name": "beneficiary_settlement",
+        "title": "Name of Beneficiary Settlement/ लाभ मिलने वाला टोला का नाम"
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_widgets",
+        "title": "What is the main source of irrigation on this land/ इस भूमि पर सिंचाई का मुख्य स्रोत क्या है?",
+        "choices": [
+         {
+          "value": "Rainfall",
+          "text": "Rainfall/ वर्षा"
+         },
+         {
+          "value": "Well",
+          "text": "Well/ कुआँ"
+         },
+         {
+          "value": "Borewell",
+          "text": "Borewell/ बोरवेल"
+         },
+         {
+          "value": "Canal",
+          "text": "Canal/ नहर"
+         },
+         {
+          "value": "Pond",
+          "text": "Pond/ तालाब"
+         },
+         {
+          "value": "don’t know",
+          "text": "don't know/ नहीं पता"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_classified",
+        "title": "What is this land classified as?/ इस भूमि को किस श्रेणी में वर्गीकृत किया गया है?",
+        "choices": [
+         {
+          "value": "Upland",
+          "text": "Upland/ऊपरी भूमि"
+         },
+         {
+          "value": "Midland",
+          "text": "Midland/ मध्यभूमि"
+         },
+         {
+          "value": "lowland",
+          "text": "lowland/ निचली भूमि"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "select_multiple_cropping_kharif",
+        "title": "What are the different cropping patterns typically practiced as main crops on such lands during the Kharif season in this grid?/\nइस ग्रिड में ख़रीफ़ सीज़न के दौरान ऐसी ज़मीनों पर मुख्य फ़सलों के रूप में आमतौर पर अपनाए जाने वाले विभिन्न फसल पैटर्न क्या हैं?\n\n",
+        "choices": [
+         {
+          "value": "paddy",
+          "text": "Paddy/ धान"
+         },
+         {
+          "value": "Millets",
+          "text": "Millets/ मोटे अनाज / श्री अन्न"
+         },
+         {
+          "value": "Pulses",
+          "text": "Pulses/ दालें"
+         },
+         {
+          "value": "Vegetables",
+          "text": "Vegetables/ सब्जियां"
+         },
+         {
+          "value": "Fruits",
+          "text": "Fruits/ फल"
+         },
+         {
+          "value": "Oil_Seeds",
+          "text": "Oil Seeds/ तिलहन"
+         },
+         {
+          "value": "Fodder_crop",
+          "text": "Fodder crop/ चारा फसल"
+         }
+        ],
+        "showOtherItem": true
+       },
+       {
+        "type": "checkbox",
+        "name": "select_multiple_cropping_Rabi",
+        "title": "What are the different cropping patterns typically practiced as main crops on such lands during the Rabi season in this grid?/\nइस ग्रिड में रबी मौसम के दौरान ऐसी भूमि पर मुख्य फसल के रूप में आमतौर पर प्रचलित विभिन्न फसल पैटर्न क्या हैं?",
+        "choices": [
+         {
+          "value": "paddy",
+          "text": "Paddy/ धान"
+         },
+         {
+          "value": "Millets",
+          "text": "Millets/ मोटे अनाज / श्री अन्न"
+         },
+         {
+          "value": "Pulses",
+          "text": "Pulses/ दालें"
+         },
+         {
+          "value": "Vegetables",
+          "text": "Vegetables/ सब्जियां"
+         },
+         {
+          "value": "Fruits",
+          "text": "Fruits/ फल"
+         },
+         {
+          "value": "Oil_Seeds",
+          "text": "Oil Seeds/ तिलहन"
+         },
+         {
+          "value": "Fodder_crop",
+          "text": "Fodder crop/ चारा फसल"
+         }
+        ],
+        "showOtherItem": true
+       },
+       {
+        "type": "checkbox",
+        "name": "select_multiple_cropping_Zaid",
+        "title": "What are the different cropping patterns typically practiced as main crops on such lands during the Zaid season in this grid?/\nइस ग्रिड में ज़ैद सीज़न के दौरान ऐसी भूमि पर मुख्य फसल के रूप में आमतौर पर प्रचलित विभिन्न फसल पैटर्न क्या हैं?",
+        "choices": [
+         {
+          "value": "paddy",
+          "text": "Paddy/ धान"
+         },
+         {
+          "value": "Millets",
+          "text": "Millets/ मोटे अनाज / श्री अन्न"
+         },
+         {
+          "value": "Pulses",
+          "text": "Pulses/ दालें"
+         },
+         {
+          "value": "Vegetables",
+          "text": "Vegetables/ सब्जियां"
+         },
+         {
+          "value": "Fruits",
+          "text": "Fruits/ फल"
+         },
+         {
+          "value": "Oil_Seeds",
+          "text": "Oil Seeds/ तिलहन"
+         },
+         {
+          "value": "Fodder_crop",
+          "text": "Fodder crop/ चारा फसल"
+         }
+        ],
+        "showOtherItem": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_productivity",
+        "title": "How has agriculture productivity changed over the last 3 years?/ पिछले तीन वर्षों में कृषि उत्पादकता में कैसा बदलाव आया है ?",
+        "choices": [
+         {
+          "value": "Increased",
+          "text": "Increased/बढ़ा हुआ"
+         },
+         {
+          "value": "Decreased",
+          "text": "Decreased/ घटा हुआ"
+         },
+         {
+          "value": "Remain Same",
+          "text": "Remain Same/ बचा हुआ"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "plan_id",
+        "title": "Plan_Id/ योजना का आईडी"
+       },
+       {
+        "type": "text",
+        "name": "plan_name",
+        "title": "Plan_name/ योजना का नाम"
+       }
+      ]
+     }
+    ]
+   }

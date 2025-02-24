@@ -1,0 +1,241 @@
+{
+    "title": "Add Well Form",
+    "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          {
+            "type": "multipletext",
+            "name": "GPS_point",
+            "title": "GPS point to be marked of the area",
+            "description": "Take a GPS point",
+            "isRequired": true,
+            "readOnly": true,
+            "items": [
+              {
+                "name": "latitude",
+                "title": "latitude (x.y °)"
+              },
+              {
+                "name": "longitude",
+                "title": "longitude (x.y °)"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "well_id",
+            "title": "Well ID/ कुआँ का आईडी",
+            "isRequired": true,
+            "readOnly": true
+          },
+          {
+            "type": "text",
+            "name": "block_name",
+            "title": "Block name/ ब्लॉक का नाम",
+            "readOnly": true
+          },
+          {
+            "type": "text",
+            "name": "beneficiary_settlement",
+            "title": "Name of Beneficiary Settlement/ लाभ मिलने वाला टोला का नाम",
+            "readOnly": true
+          },
+          {
+            "type": "checkbox",
+            "name": "select_one_well_type",
+            "title": "Well type :",
+            "choices": [
+              "Dugwell",
+              "Borewell",
+              {
+                "value": "other",
+                "text": "Other"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "select_one_well_type_other",
+            "visibleIf": "{select_one_well_type} = ['other']",
+            "title": "Specify other.",
+            "isRequired": true
+          },
+          {
+            "type": "radiogroup",
+            "name": "select_one_owns",
+            "title": "Who owns the well?/ कुआँ का मालिक कौन है ?",
+            "isRequired": true,
+            "choices": [
+              {
+                "value": "Public well",
+                "text": "Public Well"
+              },
+              "Privately owned",
+              "Shared amongst families",
+              "Don't know",
+              "Any other"
+            ]
+          },
+          {
+            "type": "text",
+            "name": "select_one_owns_other",
+            "visibleIf": "{select_one_owns} = 'Any other'",
+            "title": "Specify other.",
+            "isRequired": true
+          },
+          {
+            "type": "text",
+            "name": "well_depth",
+            "title": "Well/Borewell depth (Enter the total depth of the well/borewell in meters)",
+            "inputType": "number"
+          },
+          {
+            "type": "panel",
+            "name": "depth_to_water",
+            "title": "Depth-to-Water:\n(Enter the depth-to-water in meters)\n",
+            "elements": [
+              {
+                "type": "text",
+                "name": "pre_monsoon_depth",
+                "title": "Pre-Monsoon:\n(Enter the depth-to-water during pre-monsoon in meters)"
+              },
+              {
+                "type": "text",
+                "name": "post_monsoon_depth",
+                "title": "Post-Monsoon:\n(Enter the depth-to-water during post-monsoon in meters)"
+              }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "name": "select_multiple_water_availability",
+            "title": "Borewell/Dugwell Seasonal Water Availability:",
+            "choices": [
+              {
+                "value": "Water_available_year_round",
+                "text": "Water available year-round"
+              },
+              {
+                "value": "Water_available_only_during_the_monsoon_June_September",
+                "text": "Water available only during the monsoon (June–September)"
+              },
+              {
+                "value": "Water_available_during_monsoon_and_post_monsoon_June_December",
+                "text": "Water available during monsoon and post-monsoon (June–December)"
+              },
+              {
+                "value": "Water_available_in_monsoon_post_monsoon_and_winter_June_February",
+                "text": "Water available in monsoon, post-monsoon, and winter (June–February)"
+              },
+              {
+                "value": "No_water_available_throughout_the_year",
+                "text": "No water available throughout the year"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "households_benefited",
+            "title": "Total number of households benefited ?",
+            "inputType": "number"
+          },
+          {
+            "type": "checkbox",
+            "name": "select_multiple_caste_use",
+            "title": "Which caste groups use the well ?",
+            "choices": [
+              "GC",
+              "SC",
+              "ST",
+              "OBC"
+            ]
+          },
+          {
+            "type": "radiogroup",
+            "name": "select_one_Functional_Non_functional",
+            "title": "Is the well",
+            "choices": [
+              "Functional",
+              "Non functional"
+            ]
+          },
+          {
+            "type": "radiogroup",
+            "name": "select_one_maintenance",
+            "title": "Does the well require maintenance ?",
+            "choices": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "type": "checkbox",
+            "name": "select_one_repairs_well",
+            "visibleIf": "{select_one_maintenance} = 'Yes'",
+            "title": "Type of repairs in well",
+            "choices": [
+              {
+                "value": "Repairing cracks or damage to the surface seal around the well casing",
+                "text": "Repairing cracks or damage to the surface seal around the well casing/ कुएं के आस-पास की दरारों और क्षति की मरम्मती करना"
+              },
+              {
+                "value": "Well rehabilitation like Chemical treatment , removing material that clogs the Well",
+                "text": "Well rehabilitation like Chemical treatment , removing material that clogs the Well/ कुएँ का पुनर्वास, जैसे- पानी को साफ़ करने के लिए केमिकल का उपयोग करना और गंदगी को साफ़ करना।"
+              },
+              {
+                "value": "Repairing handpumps or other pumping devices",
+                "text": "Repairing handpumps or other pumping devices/ चापाकल और अन्य पम्पिंग उपकरण की मरम्मत"
+              },
+              {
+                "value": "Constructing soil bunds around the well to prevent surface runoff",
+                "text": "Constructing soil bunds around the well to prevent surface runoff / पानी को रोकने के लिए कुएं के चारों ओर छोटे-छोटे बांध बनाना"
+              },
+              {
+                "value": "Well deepening",
+                "text": "Well deepening/ कुआँ को गहरा करना"
+              },
+              {
+                "value": "Item 1",
+                "text": "Other"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "select_one_repairs_well_other",
+            "visibleIf": "{select_one_repairs_well} allof ['Item 1']",
+            "title": "Specify other.",
+            "isRequired": true
+          },
+          {
+            "type": "imagepicker",
+            "name": "question14",
+            "title": "Photo of the area",
+            "imageFit": "cover"
+          },
+          {
+            "type": "comment",
+            "name": "text_record",
+            "title": "Record a message justifying the need for the maintainance recharge structure at this location"
+          },
+          {
+            "type": "text",
+            "name": "plan_id",
+            "title": "Plan Id",
+            "readOnly": true,
+            "inputType": "number"
+          },
+          {
+            "type": "text",
+            "name": "plan_name",
+            "title": "Plan name",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "showQuestionNumbers": "off",
+    "allowResizeComment": false,
+    "widthMode": "responsive"
+  }

@@ -1,0 +1,280 @@
+{
+    "title": "Propose Maintenance On Existing Irrigation Structures",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "GPS_point",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "point_mapappearance",
+          "title": "Take a GPS point/ एक जीपीएस प्वाइंट ले\n",
+          "items": [
+           {
+            "name": "text1",
+            "title": "latitude (x.y °)"
+           },
+           {
+            "name": "text2",
+            "title": "longitude (x.y °)"
+           }
+          ]
+         }
+        ],
+        "title": "GPS point to be marked of the area/ स्थान का जीपीएस प्वाइंट चिह्नित करें\n"
+       },
+       {
+        "type": "text",
+        "name": "block_name",
+        "title": "Block name/ ब्लॉक का नाम"
+       },
+       {
+        "type": "text",
+        "name": "beneficiary_settlement",
+        "title": "Name of Beneficiary Settlement/ लाभ मिलने वाला टोला का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Beneficiary_Name",
+        "title": "Beneficiary Name/ लाभार्थी का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Beneficiary_Contact_Number",
+        "title": "Beneficiary Contact Number/ लाभार्थी का फोन नंबर"
+       },
+       {
+        "type": "text",
+        "name": "work_id",
+        "title": "Work ID/ कार्य आईडी"
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_activities",
+        "title": "Have there been any previous repairs\nor maintenance activities on the\nIrrigation structures?/ क्या पहले कोई मरम्मत या फिर सिंचाई स्ट्रक्चर के रखरखाव सम्बंधित काम हुआ है ?\n\n",
+        "choices": [
+         {
+          "value": "yes",
+          "text": "Yes/ हाँ"
+         },
+         {
+          "value": "no",
+          "text": "No/ नहीं"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_repair",
+        "title": "Type of repair work on Irrigation Assets",
+        "choices": [
+         {
+          "value": "Farm pond",
+          "text": "Farm pond/ खेत का तालाब/ तालाब"
+         },
+         {
+          "value": "Bunding: contour bunds/ graded bunds",
+          "text": "Bunding: contour bunds/ graded bunds/ मेड़बंदी: कंटूर बाँध / ग्रेडेड बाँध"
+         },
+         {
+          "value": "Well",
+          "text": "Well/ कुंआ"
+         },
+         {
+          "value": "Irrigation channel",
+          "text": "Irrigation channel/ सिंचाई चैनल"
+         },
+         {
+          "value": "Farm bund",
+          "text": "Farm bund/ खेत का मेड़"
+         },
+         {
+          "value": "Canal",
+          "text": "Canal/ नहर"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "Farm_pond",
+        "visibleIf": "{select_one_repair} = 'Farm pond'",
+        "title": "Provide dimensions for Farm pond/ खेत में बनाये गए तालाब का माप बताएं",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -width/ चौड़ाई बताएं\n"
+         },
+         {
+          "name": "text3",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question6",
+        "visibleIf": "{select_one_repair} = 'Farm pond'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Bunding",
+        "visibleIf": "{select_one_repair} = 'Bunding: contour bunds/ graded bunds'",
+        "title": "Provide dimensions of bunding :contour bunds/graded bunds/ बाँध का माप बताएं : कंटूर बाँध / ग्रेडेड बाँध",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -length/ लंबाई बताएं\n"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions –width/चौड़ाई बताएं"
+         },
+         {
+          "name": "text3",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question8",
+        "visibleIf": "{select_one_repair} = 'Bunding: contour bunds/ graded bunds'",
+        "title": "length, width, height is in meter/ लंबाई, चौड़ाई और ऊंचाई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Well",
+        "visibleIf": "{select_one_repair} = 'Well'",
+        "title": "Provide dimensions for well/ कुएं का माप बताएं",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -diameter/ व्यास बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question10",
+        "visibleIf": "{select_one_repair} = 'Well'",
+        "title": "diameter, depth is in meter/ व्यास, गहराई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Irrigation_channel",
+        "visibleIf": "{select_one_repair} = 'Irrigation channel'",
+        "title": "Provide dimensions irrigation channel/ सिंचाई चैनल का माप बताएं",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -width/ चौड़ाई बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question12",
+        "visibleIf": "{select_one_repair} = 'Irrigation channel'",
+        "title": "width, depth is in meter/ चौड़ाई, गहराई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Farm_bund",
+        "visibleIf": "{select_one_repair} = 'Farm bund'",
+        "title": "Provide dimensions farm bund/ खेत के मेड़ का माप बताएं",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -length/लंबाई बताएं\n"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -width/ चौड़ाई बताएं"
+         },
+         {
+          "name": "text3",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question14",
+        "visibleIf": "{select_one_repair} = 'Farm bund'",
+        "title": "length, width, height is in meter/ लंबाई, चौड़ाई और ऊंचाई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Canal",
+        "visibleIf": "{select_one_repair} = 'Canal'",
+        "title": "Provide dimensions canal/ नहर का माप बताएं",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -width/ चौड़ाई बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "name": "question16",
+        "visibleIf": "{select_one_repair} = 'Canal'",
+        "title": "width, depth is in meter/ चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "imagepicker",
+        "name": "image_widget",
+        "title": "Photo of the area/ क्षेत्र का फोटो",
+        "choices": [
+         {
+          "value": "Image 1",
+          "imageLink": "https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg"
+         }
+        ],
+        "imageFit": "cover"
+       },
+       {
+        "type": "text",
+        "name": "text_record",
+        "title": "Record a message justifying the need for the maintainance recharge structure at this location/ इस स्थान पर रिचार्ज स्ट्रक्चर के रख रखाव की आवश्यकता क्यों है, यह बताते हुए एक संदेश रिकॉर्ड करें"
+       },
+       {
+        "type": "text",
+        "name": "plan_id",
+        "title": "Plan_Id/ योजना का आईडी"
+       },
+       {
+        "type": "text",
+        "name": "plan_name",
+        "title": "Plan_name/ योजना का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Corresponding_Work_ID",
+        "title": "Corresponding Work ID/सम्बंधित कार्य आईडी"
+       }
+      ]
+     }
+    ]
+   }

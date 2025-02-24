@@ -1,0 +1,217 @@
+.slider_container {
+    display: flex;
+    z-index: 2;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    position: absolute;
+    top: 17%;
+    left: 50%;               /* 50% from the left */
+    transform: translate(-50%, -50%);
+  }
+  
+  .busy
+  {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif') 
+                50% 50% no-repeat rgb(249,249,249);
+  }
+  
+  
+  .loader_div {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+  }
+  
+  .map_container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .map {
+    width: 100vw;
+    height: 100vh; 
+  }
+  
+  .header_buttons{
+    display: flex;
+    align-items: center;
+    all: unset;
+    position: absolute;
+    margin-left: 5em;   
+    width: 80vw;
+    top: 0%;
+    margin-top: 8em;
+    background-color: transparent;
+  }
+  
+  
+  .header_button {
+    all: unset;
+    background: white;
+    padding: 7px 12px;
+    border-radius: 12px;
+    position: relative;
+    margin: 1%;
+    z-index: 1;
+    font-size: 11px;
+  }
+  
+  .header_secondary_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    margin-top: 12em;
+    margin-left: 0.5em;   
+    background-color: transparent;
+  }
+  
+  
+  .header_secondary_button{
+    margin-bottom: 1em;
+  }
+  
+  
+  .active_button {
+    background-color: #258dfc; 
+    color: white; 
+  }
+  
+  .plan_dropdown {
+    background: white;
+    border: 10px;
+    font-size: 11px;
+    width: auto;
+  }
+  
+  
+  .footer_buttons_social {
+    position: absolute;
+    /* top: 90%;
+    left: 50%; */
+    top: 80%;
+    /* transform: translate(-50%, -50%); */
+  
+    /* padding: 5px 0;
+    
+    z-index: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  
+  .footer_buttons{
+    position: absolute;
+    /* top: 90%;
+    left: 50%; */
+    top: 82%;
+    /* transform: translate(-50%, -50%); */
+  
+    /* padding: 5px 0;
+    
+    z-index: 1; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer_buttons_main_group{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer_button {
+    all: unset;
+    padding: 6px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 1;
+    margin: 7px;
+    background-color: #498467;
+    color: white;
+    font-weight: medium;
+    font-size: 11px;
+  }
+  
+  .footer_button:focus {
+    outline: 2px solid #3ed489;
+  }
+  
+  .inactive_button {
+    background-color: #5D6D7E;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .transient_button {
+    background-color: #9B59B6;
+    color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .transient_map_button {
+    background-color: #F1C40F;
+    color: #fff;
+    cursor: not-allowed;
+  }
+  
+  
+  .sb {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  /* .dropdown {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  } */
+  
+  .info_button {
+    all: unset;
+    background: white;
+    padding: 7px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 1;
+    margin: 7px;
+    position: initial;
+    right: 1px;
+  }
+  
+  
+  .checkbox_column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  

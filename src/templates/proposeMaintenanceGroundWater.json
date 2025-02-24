@@ -1,0 +1,568 @@
+{
+    "title": "Propose Maintenance On Existing Water Recharge Structures",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+           "type": "multipletext",
+           "name": "GPS_point",
+           "title": "GPS point to be marked of the area/ स्थान का जीपीएस प्वाइंट चिह्नित करें\n",
+           "description": "Take a GPS point",
+           "isRequired": true,
+           "readOnly": true,
+           "items": [
+            {
+             "name": "latitude",
+             "title": "latitude (x.y °)"
+            },
+            {
+             "name": "longitude",
+             "title": "longitude (x.y °)"
+            }
+           ]
+          },
+       {
+        "type": "text",
+        "name": "block_name",
+        "title": "Block name/ ब्लॉक का नाम"
+       },
+       {
+        "type": "text",
+        "name": "beneficiary_settlement",
+        "title": "Name of Beneficiary Settlement/ लाभ मिलने वाला टोला का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Beneficiary_Name",
+        "title": "Beneficiary Name/ लाभार्थी का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Beneficiary_Contact_Number",
+        "title": "Beneficiary Contact Number/ लाभार्थी का फोन नंबर"
+       },
+       {
+        "type": "text",
+        "name": "work_id",
+        "title": "Work ID/ कार्य आईडी"
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_activities",
+        "title": "Have there been any previous repairs\nor maintenance activities on the\nGroundwater recharge structure?/ ग्राउंडवॉटर रिचार्ज स्ट्रक्चर में पहले कोई रखरखाव सम्बंधित कार्य हुआ है ?\n\n\n",
+        "choices": [
+         {
+          "value": "yes",
+          "text": "Yes/ हाँ"
+         },
+         {
+          "value": "no",
+          "text": "No/ नहीं"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_visible_issues",
+        "title": "Any visible issues with the recharge structures?/ रिचार्ज स्ट्रक्चर में कोई समस्या दिख रही है ?",
+        "choices": [
+         {
+          "value": "Check dam",
+          "text": "Check dam/ चेक डैम"
+         },
+         {
+          "value": "Percolation tank",
+          "text": "Percolation tank/ परकोलेशन टैंक"
+         },
+         {
+          "value": "Earthen gully plug",
+          "text": "Earthen gully plug/ अर्थन गली प्लग्स"
+         },
+         {
+          "value": "Drainage channels",
+          "text": "Drainage/soakage channels/ नाली /सोख्ता नाली"
+         },
+         {
+          "value": "Recharge pits",
+          "text": "Recharge pits/ रिचार्ज पिट्स"
+         },
+         {
+          "value": "Sokage pits",
+          "text": "Sokage pits/ सोख्ता गड्ढे"
+         },
+         {
+          "value": "Trench cum bund network",
+          "text": "Trench cum bund network/ ट्रेंच /बाँध"
+         },
+         {
+          "value": "Continuous contour trenches (CCT)",
+          "text": "Continuous contour trenches (CCT)/ कन्टिन्यूवस कंटूर ट्रेंच (CCT )"
+         },
+         {
+          "value": "Staggered Contour trenches(SCT)",
+          "text": "Staggered Contour trenches(SCT)/ स्टैगर्ड कंटूर ट्रेंच (SCT"
+         },
+         {
+          "value": "Water absorption trenches(WAT)",
+          "text": "Water absorption trenches(WAT)/ वॉटर अब्सॉर्प्शन ट्रेंच का माप बताएं (WAT)"
+         },
+         {
+          "value": "Loose boulder structure",
+          "text": "Loose boulder structure/ लूज बोल्डर स्ट्रक्चर"
+         },
+         {
+          "value": "Rock fill dam",
+          "text": "Rock fill dam/ रॉक फिल डैम"
+         },
+         {
+          "value": "Stone bunding",
+          "text": "Stone bunding/ पत्थर बाँध"
+         },
+         {
+          "value": "Diversion drains",
+          "text": "Diversion drains/ डायवर्जन नालियाँ"
+         },
+         {
+          "value": "Model structure1",
+          "text": "5% model structure/ 5% मॉडल स्ट्रक्चर"
+         },
+         {
+          "value": "Model structure2",
+          "text": "30-40 model structure / 30-40 मॉडल स्ट्रक्चर"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "Check_dam",
+        "visibleIf": "{select_one_visible_issues} = 'Check dam'",
+        "title": "Provide dimensions for Check dam/ चेक डैम का माप बताएं",
+        "items": [
+         {
+          "name": "Length_1",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_1",
+          "title": "Provide dimensions- width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Height_1",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "note_dimensions_meter",
+        "visibleIf": "{select_one_visible_issues} = 'Check dam'",
+        "title": "length, width, height is in meter/ लंबाई, चौड़ाई, ऊंचाई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Percolation_tank",
+        "visibleIf": "{select_one_visible_issues} = 'Percolation tank'",
+        "title": "Provide dimensions for Percolation tank/ परकोलेशन टैंक का माप बताएं",
+        "items": [
+         {
+          "name": "Length_2",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_2",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं\n"
+         },
+         {
+          "name": "Depth_2",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question4",
+        "visibleIf": "{select_one_visible_issues} = 'Percolation tank'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Earthen_gully_plug",
+        "visibleIf": "{select_one_visible_issues} = 'Earthen gully plug'",
+        "title": "Provide dimensions for Earthen gully plug/ अर्थन गली प्लग्स का माप बताएं",
+        "items": [
+         {
+          "name": "Length_3",
+          "title": "Provide dimensions -length/ लंबाई बताएं\n"
+         },
+         {
+          "name": "Width_3",
+          "title": "Provide dimensions- width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Breadth_3",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question6",
+        "visibleIf": "{select_one_visible_issues} = 'Earthen gully plug'",
+        "title": "length, height, width is in meter/ लंबाई, चौड़ाई,ऊंचाई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Drainage_channels",
+        "visibleIf": "{select_one_visible_issues} = 'Drainage/soakage channels'",
+        "title": "Provide dimensions Drainage/Soakage channels/ नाली /सोख्ता नाला का माप बताएं",
+        "items": [
+         {
+          "name": "Width_4",
+          "title": "Provide dimensions width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_4",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question8",
+        "visibleIf": "{select_one_visible_issues} = 'Drainage/soakage channels'",
+        "title": "width, depth is in meter/ चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Recharge_pits",
+        "visibleIf": "{select_one_visible_issues} = 'Recharge pits'",
+        "title": "Provide dimensions recharge pits/ रिचार्ज पिट का माप बताएं\n",
+        "items": [
+         {
+          "name": "Length_5",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_5",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_5",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question10",
+        "visibleIf": "{select_one_visible_issues} = 'Recharge pits'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Sokage_pits",
+        "visibleIf": "{select_one_visible_issues} = 'Sokage pits'",
+        "title": "Provide dimensions sokage pits/ सोख्ता गड्ढों का माप बताएं",
+        "items": [
+         {
+          "name": "Width_6",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_6",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question12",
+        "visibleIf": "{select_one_visible_issues} = 'Sokage pits'",
+        "title": "width, depth is in meter/ चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Trench_cum_bund_network",
+        "visibleIf": "{select_one_visible_issues} = 'Trench cum bund network'",
+        "title": "Provide dimensions trench cum bund network/ ट्रेंच /बाँध का माप बताएं",
+        "items": [
+         {
+          "name": "Length_7",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_7",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_7",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question14",
+        "visibleIf": "{select_one_visible_issues} = 'Trench cum bund network'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Continuous_contour_trenches",
+        "visibleIf": "{select_one_visible_issues} = 'Continuous contour trenches (CCT)'",
+        "title": "Provide dimensions for Continuous contour trenches (CCT)/ कन्टिन्यूवस कंटूर ट्रेंच का माप बताएं",
+        "items": [
+         {
+          "name": "Length_8",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_8",
+          "title": "Provide dimensions -width / चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_8",
+          "title": "Provide dimensions -depth / गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question18",
+        "visibleIf": "{select_one_visible_issues} = 'Continuous contour trenches (CCT)'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Staggered_contour_trenches",
+        "visibleIf": "{select_one_visible_issues} = 'Staggered Contour trenches(SCT)'",
+        "title": "Provide dimensions for Staggered Contour trenches(SCT)/ स्टैगर्ड कंटूर ट्रेंच का माप बताएं\n",
+        "items": [
+         {
+          "name": "Length_9",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_9",
+          "title": "Provide dimensions -width / चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_9",
+          "title": "Provide dimensions -depth / गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question20",
+        "visibleIf": "{select_one_visible_issues} = 'Staggered Contour trenches(SCT)'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Water_absorption_trenches",
+        "visibleIf": "{select_one_visible_issues} = 'Water absorption trenches(WAT)'",
+        "title": "Provide dimensions for Water absorption trenches(WAT)/ वॉटर अब्सॉर्प्शन ट्रेंच का माप बताएं\n",
+        "items": [
+         {
+          "name": "Length_10",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_10",
+          "title": "Provide dimensions -width / चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_10",
+          "title": "Provide dimensions -depth / गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question16",
+        "visibleIf": "{select_one_visible_issues} = 'Water absorption trenches(WAT)'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Loose_boulder_structure",
+        "visibleIf": "{select_one_visible_issues} = 'Loose boulder structure'",
+        "title": "Provide dimensions for Loose boulder structure/ लूज बोल्डर स्ट्रक्चर का माप बताएं",
+        "items": [
+         {
+          "name": "Length_11",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_11",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं\n"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question22",
+        "visibleIf": "{select_one_visible_issues} = 'Loose boulder structure'",
+        "title": "length, width is in meter/लंबाई,चौड़ाई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Rock_fill_dam",
+        "visibleIf": "{select_one_visible_issues} = 'Rock fill dam'",
+        "title": "Provide dimensions for Rock fill dam/ रॉक फिल बांध का माप बताएं",
+        "items": [
+         {
+          "name": "Width_12",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Height_12",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question24",
+        "visibleIf": "{select_one_visible_issues} = 'Rock fill dam'",
+        "title": "width, height is in meter/ चौड़ाई,ऊंचाई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Stone_bunding",
+        "visibleIf": "{select_one_visible_issues} = 'Stone bunding'",
+        "title": "Provide dimensions for Stone bunding/ पत्थर बांध का माप बताएं",
+        "items": [
+         {
+          "name": "Length_15",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Width_15",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं\n"
+         },
+         {
+          "name": "Height_15",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question26",
+        "visibleIf": "{select_one_visible_issues} = 'Stone bunding'",
+        "title": "length, width, height is in meter/ लंबाई, चौड़ाई, ऊंचाई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Diversion_drains",
+        "visibleIf": "{select_one_visible_issues} = 'Diversion drains'",
+        "title": "Provide dimensions for Diversion drains/ डायवर्जन नालियों का माप बताएं",
+        "items": [
+         {
+          "name": "Width_16",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "Depth_16",
+          "title": "Provide dimensions -depth/ गहराई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question28",
+        "visibleIf": "{select_one_visible_issues} = 'Diversion drains'",
+        "title": "width, depth is in meter/ चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Model_structure1",
+        "visibleIf": "{select_one_visible_issues} = 'Model structure1'",
+        "title": "Provide dimensions of 5% model structure/ 5% मॉडल स्ट्रक्चर का माप बताएं\n",
+        "items": [
+         {
+          "name": "Length_13",
+          "title": "Provide dimensions -length/ लंबाई बताएं\n"
+         },
+         {
+          "name": "Breadth_13",
+          "title": "Provide dimensions –breadth/चौड़ाई बातएं\n"
+         },
+         {
+          "name": "Height_13",
+          "title": "Provide dimensions –height/ ऊंचाई बातएं\n"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question30",
+        "visibleIf": "{select_one_visible_issues} = 'Model structure1'",
+        "title": "length, breadth, height is in meter/ लंबाई, चौड़ाई, ऊंचाई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Model_structure2",
+        "visibleIf": "{select_one_visible_issues} = 'Model structure2'",
+        "title": "Provide dimensions 30-40 model structure / 30-40 मॉडल स्ट्रक्चर का माप बताएं",
+        "items": [
+         {
+          "name": "Length_14",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "Breadth_14",
+          "title": "Provide dimensions -breadth/चौड़ाई बातएं\n"
+         },
+         {
+          "name": "Height_14",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question32",
+        "visibleIf": "{select_one_visible_issues} = 'Model structure2'",
+        "title": "length, breadth, height is in meter/ लंबाई, चौड़ाई, ऊंचाई की जानकारी मीटर में दें\n"
+       },
+       {
+        "type": "imagepicker",
+        "name": "image_widget",
+        "title": "Photo of the area/ क्षेत्र का फोटो",
+        "choices": [
+         {
+          "value": "Image 1",
+          "imageLink": "https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg"
+         }
+        ],
+        "imageFit": "cover"
+       },
+       {
+        "type": "text",
+        "name": "text_record",
+        "title": "Record a message justifying the need for the maintainance recharge structure at this location/ इस स्थान पर रिचार्ज स्ट्रक्चर के रख रखाव की आवश्यकता क्यों है, यह बताते हुए एक संदेश रिकॉर्ड करें"
+       },
+       {
+        "type": "text",
+        "name": "plan_id",
+        "title": "Plan_Id/ योजना का आईडी"
+       },
+       {
+        "type": "text",
+        "name": "plan_name",
+        "title": "Plan_name/ योजना का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Corresponding_Work_ID",
+        "title": "Corresponding Work ID/सम्बंधित कार्य आईडी"
+       }
+      ]
+     }
+    ]
+   }

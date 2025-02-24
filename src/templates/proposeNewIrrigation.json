@@ -1,0 +1,294 @@
+{
+    "title": "Propose New Irrigation Work",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "GPS_point",
+        "elements": [
+         {
+          "type": "multipletext",
+          "name": "point_mapappearance",
+          "title": "Take a GPS point/ एक जीपीएस प्वाइंट ले\n",
+          "items": [
+           {
+            "name": "text1",
+            "title": "latitude (x.y °)"
+           },
+           {
+            "name": "text2",
+            "title": "longitude (x.y °)"
+           }
+          ]
+         }
+        ],
+        "title": "GPS point to be marked of the area/ स्थान का जीपीएस प्वाइंट चिह्नित करें\n"
+       },
+       {
+        "type": "text",
+        "name": "beneficiary_settlement",
+        "title": "Name of Beneficiary Settlement/ लाभ मिलने वाला टोला का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Beneficiary_Name",
+        "title": "Beneficiary Name/ लाभार्थी का नाम"
+       },
+       {
+        "type": "text",
+        "name": "Beneficiary_Contact_Number",
+        "title": "Beneficiary Contact Number/ लाभार्थी का फोन नंबर"
+       },
+       {
+        "type": "text",
+        "name": "block_name",
+        "title": "Block name/ ब्लॉक का नाम"
+       },
+       {
+        "type": "text",
+        "name": "work_id",
+        "title": "Work ID/ कार्य आईडी"
+       },
+       {
+        "type": "radiogroup",
+        "name": "TYPE_OF_WORK_ID",
+        "title": "Select the type of work/ कार्य का प्रकार चुनें-",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "Farm pond",
+          "text": "Farm pond/ खेत का तालाब/ तालाब"
+         },
+         {
+          "value": "Bunding: contour bunds/ graded bunds",
+          "text": "Bunding: contour bunds/ graded bunds/ मेड़बंदी: कंटूर बांध/ग्रेड बांध"
+         },
+         {
+          "value": "Well",
+          "text": "Well/ कुंआ"
+         },
+         {
+          "value": "Irrigation channel",
+          "text": "Irrigation channel/ सिंचाई नाला"
+         },
+         {
+          "value": "Farm bund",
+          "text": "Farm bund/ खेत का मेड़"
+         }
+        ]
+       },
+       {
+        "type": "multipletext",
+        "name": "Farm_pond",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Farm pond'",
+        "title": "Provide dimensions for Farm pond/ खेत में बनाये गए तालाब का माप बताएं-",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions- width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "text3",
+          "title": "Provide dimensions -depth/ गहराई बताएं-"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "note_dimensions_meter",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Farm pond'",
+        "title": "length, width, depth is in meter/ लंबाई, चौड़ाई और गहराई की जानकारी मीटर में दें-"
+       },
+       {
+        "type": "multipletext",
+        "name": "Bunding",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Bunding: contour bunds/ graded bunds'",
+        "title": "Provide dimensions of bunding :contour bunds/graded bunds/\nबाँध का माप बताएं : कंटूर बांध/ग्रेड बांध-\n",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं\n"
+         },
+         {
+          "name": "text3",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं-"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question4",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Bunding: contour bunds/ graded bunds'",
+        "title": "length, width, height is in meter/ लंबाई, चौड़ाई और ऊंचाई की जानकारी मीटर में दें-"
+       },
+       {
+        "type": "multipletext",
+        "name": "Well",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Well'",
+        "title": "Provide dimensions for well/ कुएं का माप बताएं-",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -diameter/ व्यास बताएं-\n"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -depth/ गहराई बताएं-"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question6",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Well'",
+        "title": "diameter, depth is in meter/ व्यास और गहराई की जानकारी मीटर में दें-\n"
+       },
+       {
+        "type": "multipletext",
+        "name": "Irrigation_channel",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Irrigation channel'",
+        "title": "Provide dimensions irrigation channel/ सिंचाई चैनल का माप बताएं-",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -width/ चौड़ाई बताएं-"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -depth/ गहराई बताएं-\n"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question8",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Irrigation channel'",
+        "title": "width, depth is in meter/ चौड़ाई, गहराई की जानकारी मीटर में दें"
+       },
+       {
+        "type": "multipletext",
+        "name": "Farm_bund",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Farm bund'",
+        "title": "Provide dimensions farm bund/ खेत के मेड़ का माप बताएं-\n",
+        "items": [
+         {
+          "name": "text1",
+          "title": "Provide dimensions -length/ लंबाई बताएं"
+         },
+         {
+          "name": "text2",
+          "title": "Provide dimensions -width/ चौड़ाई बातएं"
+         },
+         {
+          "name": "text3",
+          "title": "Provide dimensions -height/ ऊंचाई बताएं-\n"
+         }
+        ]
+       },
+       {
+        "type": "expression",
+        "name": "question10",
+        "visibleIf": "{TYPE_OF_WORK_ID} = 'Farm bund'",
+        "title": "length, width, height is in meter/ लंबाई, चौड़ाई और ऊंचाई की जानकारी मीटर में दें-"
+       },
+       {
+        "type": "checkbox",
+        "name": "select_multiple_cropping_kharif",
+        "title": "What type of crops are grown in Kharif?/ खरीफ के सीजन में कौन सी फसलें उगाई जाती हैं?-",
+        "choices": [
+         {
+          "value": "Paddy",
+          "text": "Paddy/ धान का खेत"
+         },
+         {
+          "value": "Millets",
+          "text": "Millets/ बाजरा"
+         },
+         {
+          "value": "Pulses",
+          "text": "Pulses/दलहन"
+         },
+         {
+          "value": "Vegetables",
+          "text": "Vegetables / सब्ज़ियाँ"
+         },
+         {
+          "value": "Fruits",
+          "text": "Fruits/ फल"
+         },
+         {
+          "value": "Oil_Seeds",
+          "text": "Oil Seeds/ तिलहन"
+         },
+         {
+          "value": "Fodder_crop",
+          "text": "Fodder crop/ चारे की फसल"
+         }
+        ],
+        "showOtherItem": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "select_one_cropping_pattern",
+        "title": "What type of cropping pattern is practiced?/ किस प्रकार की फसल पद्धति को अपनाया जाता है ?-\n\n",
+        "choices": [
+         {
+          "value": "Mono cropping",
+          "text": "Mono cropping/ एकल फसली व्यवस्था"
+         },
+         {
+          "value": "Inter cropping",
+          "text": "Inter cropping/ अंतर – फसल"
+         },
+         {
+          "value": "Mixed cropping",
+          "text": "Mixed cropping/ मिश्रित फसल"
+         },
+         {
+          "value": "Crop rotation",
+          "text": "Crop rotation/ फसल चक्र"
+         }
+        ]
+       },
+       {
+        "type": "imagepicker",
+        "name": "image_widget",
+        "title": "Photo of the area/ क्षेत्र का फोटो",
+        "choices": [
+         {
+          "value": "Image 1",
+          "imageLink": "https://surveyjs.io/Content/Images/examples/image-picker/lion.jpg"
+         }
+        ],
+        "imageFit": "cover"
+       },
+       {
+        "type": "text",
+        "name": "text_record",
+        "title": "Record a message justifying the need for the maintainance recharge structure at this location/ इस स्थान पर रिचार्ज स्ट्रक्चर के रख रखाव की आवश्यकता क्यों है, यह बताते हुए एक संदेश रिकॉर्ड करें"
+       },
+       {
+        "type": "text",
+        "name": "plan_id",
+        "title": "Plan_Id/ योजना का आईडी"
+       },
+       {
+        "type": "text",
+        "name": "plan_name",
+        "title": "Plan_name/ योजना का नाम"
+       }
+      ]
+     }
+    ]
+   }
