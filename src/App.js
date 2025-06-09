@@ -57,39 +57,6 @@ function App() {
         //? Grabbing info from the URL
         const queryParameters = new URLSearchParams(window.location.search);
 
-        //? Initialize DB
-        // const openRequest = window.indexedDB.open("notes_db", 1);
-        // openRequest.addEventListener("error", () =>
-        //     console.error("Database failed to open"),
-        // );
-
-        // openRequest.addEventListener("success", () => {
-        //     console.log("Database opened successfully");
-          
-        //     // Store the opened database object in the db variable. This is used a lot below
-        //     updateDBConnection(openRequest.result)
-          
-        //     // Run the displayData() function to display the notes already in the IDB
-        //     //displayData();
-        // });
-
-        // openRequest.addEventListener("upgradeneeded", (e) => {
-        //     // Grab a reference to the opened database
-        //     let db = e.target.result;
-          
-        //     // Create an objectStore in our database to store notes and an auto-incrementing key
-        //     // An objectStore is similar to a 'table' in a relational database
-        //     const objectStore = db.createObjectStore("notes_os", {
-        //       keyPath: "id",
-        //       autoIncrement: true,
-        //     });
-          
-        //     // Define what data items the objectStore will contain
-        //     objectStore.createIndex("title", "title", { unique: false });
-        //     objectStore.createIndex("body", "body", { unique: false });
-          
-        //     console.log("Database setup complete");
-        // });
 
         // MARK: Fetch Plan Data
         localStorage.setItem("isOffline", queryParameters.get("isOffline"));
@@ -132,23 +99,6 @@ function App() {
                     <Route path="/forest" element={<Livelihood setScreenTitle={setScreenTitle} setScreenIcon={setScreenIcon} setGpsLocationMain={setGpsLocationMain} />} />
                 </Routes>
             </BrowserRouter>
-
-            <div className="bottom-bar-banner">
-                <div className="bottom-banner-main">
-                    {settlementName !== null && (
-                        <div className="bottom-banner-text">
-                            <strong>Settlement:</strong> {settlementName}
-                        </div>
-                    )}                    
-                    <div className="bottom-banner-text"><strong>Lat:</strong>{" "}{gpsLocationMain !== null ? Math.round(gpsLocationMain[1] * 100) / 100 : "Location not found."}</div>
-                    <div className="bottom-banner-text"><strong>Long:</strong>{" "}{gpsLocationMain !== null ? Math.round(gpsLocationMain[0] * 100) / 100 : "Location not found."}</div>
-                    <div>
-                        <button className="bottom-copy-button" onClick={handleLatLongClick}>
-                            <FontAwesomeIcon icon={faCopy} className="" />
-                        </button>
-                    </div>
-                </div>
-            </div>
 
             <div className="location-selector-modal">
                 <MainScreenModal />

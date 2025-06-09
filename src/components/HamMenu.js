@@ -108,6 +108,13 @@ const HamMenu = ({ screenTitle, screenIcon }) => {
             <div className={styles.menu_top}>
               <div
                 className={styles.menu_item}
+                onClick={() => handleToggle(onSetFormToggle)}
+              >
+                <FontAwesomeIcon icon={faSync} />
+                <div className={styles.menu_item_start}>{t('Sync Offline Data')}</div>
+              </div>
+              {/* <div
+                className={styles.menu_item}
                 onClick={() => handleToggle(onSetLocationModal)}
               >
                 <FontAwesomeIcon icon={faMapMarkedAlt} />
@@ -135,7 +142,7 @@ const HamMenu = ({ screenTitle, screenIcon }) => {
               >
                 <FontAwesomeIcon icon={faFileUpload} />
                 <div className={styles.menu_item_start}>{t("Upload KML")}</div>
-              </div>
+              </div> */}
               {/* <div className={styles.menu_item_disabled}>
                 <FontAwesomeIcon icon={faQuestion} />
                 <div className={styles.menu_item_start}>{t("How to use")}</div>
@@ -155,14 +162,14 @@ const HamMenu = ({ screenTitle, screenIcon }) => {
               <div className={styles.menu_item_last}>{t("Report a Bug")}</div>
 
             </div> */}
-            <div
+            {/* <div
               className={styles.menu_last}
               onClick={() => handleToggle(onSetFormToggle)}
             >
               <FontAwesomeIcon icon={faSync} style={{ marginRight: '7px' }} />
               <div className={styles.menu_item_last}>{t('Sync Offline Data')}</div>
 
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
